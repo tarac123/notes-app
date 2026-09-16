@@ -5,7 +5,7 @@ function App() {
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
-    fetch("/api/notes")
+fetch("https://notes-api-hld3.onrender.com/api/notes")
       .then((res) => res.json())
       .then((data) => setNotes(data));
   }, []);
