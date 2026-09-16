@@ -1,9 +1,10 @@
 import "dotenv/config";
 import express from "express";
-
-const port = process.env.PORT || 8080;
+import cors from "cors";
+const port = process.env.PORT || 8000;
 
 const app = express();
+app.use(cors());
 
 app.use(express.static("public"));
 
